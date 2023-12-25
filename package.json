@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "pinia": "^2.1.7",
+    "sass": "^1.69.5",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
