@@ -1,12 +1,17 @@
 <template>
-  <div class="app">
-    <!-- <el-button type="primary">Primary</el-button> -->
-    <el-button type="primary">Primary</el-button>
+  <div id="app">
+    <RouterView></RouterView>
   </div>
 </template>
 
-<script>
+
+<script setup>
+import Home from '@/views/Home/home.vue'
 </script>
 
 <style scoped lang="scss">
+#app {
+  width: 100vw;
+  height: 100vh;
+}
 </style>
