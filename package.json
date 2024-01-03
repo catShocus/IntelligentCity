@@ -11,9 +11,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "element-plus": "^2.4.4",
     "pinia": "^2.1.7",
     "sass": "^1.69.5",
+    "unplugin-icons": "^0.18.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
