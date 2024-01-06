@@ -6,7 +6,37 @@
         <span>智慧孪生社区</span>
       </div>
       <div class="header-weather">
+        <!-- 天气组件 -->
         <weather></weather>
+      </div>
+    </div>
+    <div class="content"></div>
+    <div class="left-panel">
+      <div class="panel-item">
+        <div class="title">
+          <span>人员管理</span>
+        </div>
+        <div class="content"></div>
+      </div>
+      <div class="panel-item">
+        <div class="title">
+          <span>业务收缴</span>
+        </div>
+        <div class="content"></div>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="panel-item">
+        <div class="title">
+          <span>公共管理</span>
+        </div>
+        <div class="content"></div>
+      </div>
+      <div class="panel-item">
+        <div class="title">
+          <span>消防预警</span>
+        </div>
+        <div class="content"></div>
       </div>
     </div>
   </div>
@@ -15,21 +45,30 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@import url('@/assets/css/panel.css');
 .home {
-  border: 1px solid red;
+  position: relative;
+  // border: 1px solid red;
   width: 100vw;
   height: 100vh;
-  background: #000000;
+  background: #01281f;
+  // back
   .header {
     position: relative;
     width: 100%;
     height: 94px;
     background-image: url('@/assets/image/home/header.png');
-    border: 1px solid green;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    // border: 1px solid green;
     .header-title {
       text-align: center;
-      line-height: 94px;
+      line-height: 80px;
       span {
+        display: inline-block;
+        width: 385px;
+        height: 50px;
         opacity: 1;
         font-size: 35px;
         font-weight: 700;
@@ -40,12 +79,21 @@
     }
     .header-weather {
       position: absolute;
-      top: 15px;
-      right: 35px;
-      width: 200px;
-      height: 30px;
-      border: 1px solid red;
+      top: 3px;
+      right: 15px;
+      width: 330px;
+      text-align: center;
     }
+  }
+  .content {
+    transform: translate(478px, 16px);
+    // border: 1px solid red;
+    width: 580px;
+    height: calc(100% - 115px);
+    border-radius: 10px;
+    background-image: url('@/assets/image/home/building.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 }
 </style>

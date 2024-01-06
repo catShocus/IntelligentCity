@@ -38,3 +38,5 @@ npm run lint
 @/assets/image下，文件名对应页面的文件名
 ## utils
 存放一些公共方法（可能会用到多个组件中的方法）
+## assest/css
+存放一些公共样式
