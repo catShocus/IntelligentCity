@@ -19,7 +19,6 @@ const getDate = new GetDate()
 let timeObj = ref({})
 onMounted(() => {
   timeObj.value = getDate.getNowDate()
-  console.log(timeObj.value, '--当前时间对象')
 })
 </script>
 
@@ -34,22 +33,15 @@ onMounted(() => {
     display: flex;
     align-items: center;
     text-align: center;
-    div:nth-child(1) {
+    div{
       opacity: 1;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: 2px;
       line-height: 48.02px;
       color: rgba(173, 254, 254, 1);
     }
-    div:nth-child(2) {
-      opacity: 1;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      line-height: 48.02px;
-      color: rgba(173, 254, 254, 1);
-    }
+
   }
   .weather-icon {
     display: flex;
@@ -57,7 +49,7 @@ onMounted(() => {
     align-items: center;
     div {
       opacity: 1;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       letter-spacing: 2px;
       line-height: 48.02px;

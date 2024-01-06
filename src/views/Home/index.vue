@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <!-- <Map></Map> -->
+    <Map></Map>
     <div class="header">
       <div class="header-title">
         <span>智慧孪生社区</span>
@@ -42,21 +42,25 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import {onMounted} from 'vue'
+
+onMounted(() => {
+ console.log(window.Cesium)
+})
+</script>
 
 <style lang="scss" scoped>
 @import url('@/assets/css/panel.css');
 .home {
   position: relative;
-  // border: 1px solid red;
   width: 100vw;
   height: 100vh;
-  background: #01281f;
-  // back
   .header {
-    position: relative;
+    position: absolute;
+    top: 0px;
     width: 100%;
-    height: 94px;
+    height: 97px;
     background-image: url('@/assets/image/home/header.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -66,6 +70,7 @@
       text-align: center;
       line-height: 80px;
       span {
+        // border: 1px solid red;
         display: inline-block;
         width: 385px;
         height: 50px;
@@ -74,26 +79,17 @@
         font-weight: 700;
         letter-spacing: 16px;
         line-height: 48.02px;
+        transform: translateY(10px);
         color: rgba(173, 254, 254, 1);
       }
     }
     .header-weather {
       position: absolute;
-      top: 3px;
-      right: 15px;
-      width: 330px;
+      top: 10px;
+      right: 40px;
+      // width: 330px;
       text-align: center;
     }
-  }
-  .content {
-    transform: translate(478px, 16px);
-    // border: 1px solid red;
-    width: 580px;
-    height: calc(100% - 115px);
-    border-radius: 10px;
-    background-image: url('@/assets/image/home/building.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
   }
 }
 </style>
