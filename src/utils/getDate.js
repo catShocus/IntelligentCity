@@ -14,11 +14,12 @@ class GetDate {
     getNowDate() {
         const now = new Date()
         this.year = now.getFullYear()
-        this.month = now.getMonth()
-        this.day = now.getDate()
+        // this.month = now.getMonth() + 1
+        this.month = (now.getMonth() + 1) < 10 ? '0' + (now.getMonth() + 1) : now.getMonth() + 1
+        this.day = now.getDate() < 10 ? '0' + now.getDate() : now.getDate()
         this.hours = now.getHours()
         this.minutes = now.getMinutes()
-        this.seconds = now.getDate()
+        this.seconds = now.getDate() < 10 ? '0' + now.getDate() : now.getDate()
         let timeObj = {
             year: this.year,
             month: this.month,
