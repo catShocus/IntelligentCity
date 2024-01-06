@@ -33,3 +33,8 @@ npm run build or pnpm run build
 ```sh
 npm run lint
 ```
+# 项目文件配置
+## 图片存放
+@/assets/image下，文件名对应页面的文件名
+## utils
+存放一些公共方法（可能会用到多个组件中的方法）
